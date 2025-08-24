@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Boyfriend 💖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #ffd6d6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+        
+        .container {
+            background: #a54469;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 100%;
+            color: white;
+        }
+        
+        h1 {
+            color: #ffd6d6;
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .message {
+            background: #ffe6f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 18px;
+            color: #a54469;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        button {
+            background: #ffd6d6;
+            color: #a54469;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        button:hover {
+            background: #ffb3c1;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer {
+            margin-top: 25px;
+            color: #ffd6d6;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .heart {
+            color: #ff2e63;
+            display: inline-block;
+            margin: 0 3px;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dear my boyfriend💖</h1>
+        
+        <div class="message" id="message">
+            The things that i want to tell you<span class="heart">✨</span>
+        </div>
+        
+        <div class="buttons">
+            <button onclick="changeMessage()">New Message<span class="heart">💌</span></button>
+            <button onclick="resetMessage()">Back</button>
+        </div>
+        
+        <div class="footer">
+            Made by your lovely girlfriend, Aiza🥰
+        </div>
+    </div>
+
+    <script>
+        const messages = [
+            "Thank you for being mine ><",
+            "I'm grateful that God has blessed me with such an incredible man like you",
+            "You're my moon..🌕 my sunshine..☀",
+            "You make me feel safe and loved",
+            "No matter how far apart we are, you're always in my heart",
+            "I think about you a lot like i care about you^^",
+            "You're such a beautiful person inside and outside",
+            "I'll always be here for you my love",
+            "I lovee youu soo muchh mwahh<3",
+            "You're the reason I smile every day",
+            "You're more than I ever dreamed of",
+            "Every day with you is a blessing"
+        ];
+        
+        function changeMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById('message').textContent = messages[randomIndex];
+        }
+        
+        function resetMessage() {
+            document.getElementById('message').textContent = "The things that i want to tell you✨";
+        }
+    </script>
+</body>
+</html>
